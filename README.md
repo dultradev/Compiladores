@@ -1,9 +1,9 @@
 # 📚 Teoria e Construção de Compiladores
 
-<div align="center">
+
 
 ![Compiladores](https://img.shields.io/badge/Disciplina-Compiladores-blue?style=for-the-badge&logo=codefactor)
-![Status](https://img.shields.io/badge/Status-1ª%20Unidade%20Concluída-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-1%C2%AA%20Unidade%20em%20Andamento-yellow?style=for-the-badge)
 ![Licença](https://img.shields.io/badge/Licen%C3%A7a-Acad%C3%AAmica-lightgrey?style=for-the-badge)
 
 
@@ -100,10 +100,12 @@ INTERPRETAÇÃO:
 [ Entradas ]     ──┘
 ```
 
-> [!TIP]
+
+> [!tip]
 > **Compile-Time vs Runtime**:
 > - No *Compile-Time*, a CPU executa o compilador. Detectam-se erros de sintaxe e tipos estáticos.
 > - No *Runtime*, a CPU executa o seu programa gerado. Ocorrem divisões por zero, estouro de memória e chamadas ao sistema operacional.
+
 
 ---
 
@@ -174,13 +176,13 @@ Se existem $N$ linguagens e $M$ processadores:
 
 ```mermaid
 flowchart LR
-    subgraph Analise ["Fase de Análise (Front-End)"]
+    subgraph Analise ["Bloco de Análise "]
         direction TB
         L1["1. Análise Léxica\n(Scanner)"] --> L2["2. Análise Sintática\n(Parser)"]
         L2 --> L3["3. Análise Semântica\n(Type Checker)"]
     end
 
-    subgraph Sintese ["Fase de Síntese (Back-End)"]
+    subgraph Sintese ["Bloco de Síntese "]
         direction TB
         S1["4. Geração de Código\nIntermediário (IR)"] --> S2["5. Otimização de Código\n(Middle/Back-End)"]
         S2 --> S3["6. Geração de Código\nFinal (Target Code)"]
@@ -224,7 +226,7 @@ Dois componentes essenciais atravessam verticalmente todas as fases:
 
 ---
 
-<div align="center">
+
   <sub>Material compilado e estruturado a partir das anotações e conteúdos da disciplina de Compiladores.</sub>
 </div>
 
