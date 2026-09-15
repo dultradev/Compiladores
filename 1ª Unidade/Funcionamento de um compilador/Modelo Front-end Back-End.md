@@ -2,7 +2,7 @@ O modelo **Front-end / Back-end** é a principal decisão arquitetural da engenh
 
 ### A Estrutura do Modelo
 
-![[Pasted image 20260914225407.png]]
+![Imagem](<../images/Pasted image 20260914225407.png>)
 _É o mesmo compilador, realizando as mesmas atividades que foram vistas, apenas sendo entendido
 sob uma outra visão (diferente da visão do modelo análise-síntese)_
 

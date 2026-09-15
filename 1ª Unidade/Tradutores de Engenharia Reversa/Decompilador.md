@@ -1,6 +1,6 @@
 O decompilador é um [[Tradutor de Engenharia Reversa]] de engenharia reversa que tenta tenta o salto conceitual mais complexo da engenharia reversa: traduzir código de máquina nativo ou bytecode intermediário de volta para uma **linguagem de programação de alto nível estruturada** (como C ou Java).
 
-![[Pasted image 20260912222542.png]]
+![Imagem](<../images/Pasted image 20260912222542.png>)
 
 Características principais:
 

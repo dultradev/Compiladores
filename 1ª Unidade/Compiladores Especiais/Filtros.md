@@ -3,7 +3,7 @@ Um filtro é um programa que transforma um programa fonte escrito em linguagem d
 >[!note]
 > Diferente de um transpilador, o filtro geralmente não muda a linguagem nem a semântica do programa; ele foca em normalização, formatação, saneamento ou instrumentação.
 
-![[Pasted image 20260912220158.png]]
+![Imagem](<../images/Pasted image 20260912220158.png>)
 ### Características principais:
 
 - É um conceito mais **genérico** que o de compilador/tradutor propriamente dito: o processamento pode ser mais simples, como reformatação de texto, remoção/substituição de padrões, conversão de codificação, etc.

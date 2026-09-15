@@ -1,13 +1,13 @@
 O modelo **Análise-Síntese** é a espinha dorsal da engenharia de compiladores. Ele divide a tarefa hercúlea de compilação em duas metades com papéis e fronteiras de responsabilidade bem demarcadas:
 
-![Imagem](<../images/Pasted image 20260913233914.png>)
+![Imagem](../images/Pasted%20image%2020260913233914.png)
 
 1. [[Bloco de Análise (Analysis)]]: "entende" o programa fonte, decompondo-o e verificando se ele é válido, construindo uma representação intermediária que capture sua estrutura e significado.
     
 2. **[[Bloco de Síntese (Synthesis)]]:** Reconstrói o programa a partir dessas estruturas intermediárias, otimizando-o e codificando-o na linguagem objeto
     
 
-![Imagem](<../images/Pasted image 20260914224706.png>)
+![Imagem](../images/Pasted%20image%2020260914224706.png)
 
 O propósito de entender um compilador através do modelo **Análise-Síntese** é aplicar o princípio de **divisão e conquista** para resolver dois problemas centrais da computação: **reduzir a complexidade cognitiva** de um problema monumental e **viabilizar a modularidade arquitetural** do software de sistemas.
 

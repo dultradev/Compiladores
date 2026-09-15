@@ -1,6 +1,6 @@
 O ofuscador é um [[Compilador]]/[[Filtros]] defensivo que reescreve o código antes da distribuição pública, preservando rigorosamente o comportamento lógico observável, mas **maximizando o custo cognitivo e computacional da engenharia reversa**.
 
-![[Pasted image 20260912223157.png]]
+![Imagem](<../images/Pasted image 20260912223157.png>)
 
 Consiste em remover informações relacionadas a depuração como tabelas de símbolos,
 número de linhas, renomear pacotes, classes, métodos, variáveis. Apesar das informações de depuração não serem necessárias para a execução do código, elas são utilizadas pelos depuradores, o que ajuda na descompilação do código.

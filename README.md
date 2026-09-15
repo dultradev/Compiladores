@@ -218,7 +218,7 @@ Dois componentes essenciais atravessam verticalmente todas as fases:
 
 ## 💻 Como Utilizar Este Repositório
 
-1. **Para Estudo Autônomo:**
+ **Para Estudo Autônomo:**
    - Siga a ordem recomendada na seção [Mapa de Conteúdo](#-mapa-de-conte%C3%BAdo-1%C2%AA-unidade).
    - Consulte o [Estudo de Caso Prático](#-estudo-de-caso-pr%C3%A1tico-o-exemplo-de-sala) para fixar a mecânica de cada fase.
 

@@ -11,7 +11,7 @@ Essa classificação avalia o quanto uma linguagem está "presa" às caracterís
 [ Físico / Dependente de Hardware ]
 ```
 
-![[Pasted image 20260913155912.png]]
+![Imagem](<../images/Pasted image 20260913155912.png>)
 
 ### 1. LLL (_Low-Level Languages_)
 

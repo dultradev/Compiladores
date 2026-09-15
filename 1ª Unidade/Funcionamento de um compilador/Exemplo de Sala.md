@@ -1,4 +1,4 @@
-![[Pasted image 20260914212736.png]]
+![Imagem](<../images/Pasted image 20260914212736.png>)
 
 
 
@@ -239,4 +239,4 @@ ADDF 5.0, R1
 MOVF R1, Id1
 ```
 
-![[Pasted image 20260914223544.png]]
+![Imagem](<../images/Pasted image 20260914223544.png>)

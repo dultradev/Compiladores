@@ -1,6 +1,6 @@
 Um pré-processador é um programa que realiza transformações no **texto fonte de entrada (obrigatoriamente um programa fonte escrito em linguagem de programação de alto nível) antes da etapa de compilação propriamente dita**, produzindo como saída um código objeto em outra linguagem de programação de alto nível com vistas a ser fornecida como entrada para um compilador na sequencia do processo de tradução.
 
-![[Pasted image 20260912220933.png]]
+![Imagem](<../images/Pasted image 20260912220933.png>)
 
 ## Características principais:
 

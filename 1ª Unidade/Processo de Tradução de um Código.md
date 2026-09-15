@@ -26,7 +26,7 @@ Programa executável
 Programa em execução (na memória)
 ```
 
-![[Pasted image 20260913164424.png]]
+![Imagem](<images/Pasted image 20260913164424.png>)
 ## 1. [[Pré-Processador]]
 
 O pré-processador atua em nível puramente **textual** antes do início da análise léxica formal. Ele não compreende a sintaxe da linguagem (não valida tipos, variáveis ou regras semânticas).

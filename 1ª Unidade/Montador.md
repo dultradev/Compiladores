@@ -1,5 +1,5 @@
 Um montador é um [[Tradutor]] cuja linguagem fonte é a **linguagem Assembly** e cuja linguagem objeto é o **código de máquina** (linguagem binária executável pelo processador).
-![[Pasted image 20260912180759.png]]
+![Imagem](<images/Pasted image 20260912180759.png>)
 
 ### Características
 - **Mapeamento quase 1:1:** 

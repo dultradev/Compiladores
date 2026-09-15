@@ -1,6 +1,6 @@
 Um transpilado (*Transpilers ou Source-Source compilers*) é um tradutor que converte um texto fonte escrito em uma linguagem de programaçã oem alto nível para outro texto objeto escrito em **outra linguagem de programação de nível de abstração semelhante** (ambas são linguagens de alto nível legíveis por humanos).
 
-![[Pasted image 20260912215058.png]]
+![Imagem](<../images/Pasted image 20260912215058.png>)
 
 ### Características principais:
 
