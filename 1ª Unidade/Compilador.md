@@ -11,7 +11,7 @@ Um **compilador** é um [[Tradutor]] que é um software de sistema (software bá
 	- todo o programa é traduzido de uma vez, gerando um arquivo executável (ou objeto) completo, que só depois será executado — separando claramente a etapa de _compilação_ da etapa de _execução_.
 	- O compilador gera um **artefato estático** desacoplado do tempo de execução (_Ahead-of-Time_ ou pré-processamento), enquanto o interpretador analisa e executa a instrução concomitantemente.
 - Como o programa inteiro é analisado antes de rodar, o compilador consegue detectar muitos erros **antes da execução** (erros de sintaxe, tipos, etc.) e também aplicar **otimizações** mais profundas, já que tem uma visão completa do programa.
-![[Pasted image 20260912205034.png]]
+![[.images/Pasted image 20260912205034.png]]
 
 ### Tempo de Compilação (Compile Time)
 É a fase em que o compilador analisa, valida e traduz o código-fonte em artefato binário/objeto.

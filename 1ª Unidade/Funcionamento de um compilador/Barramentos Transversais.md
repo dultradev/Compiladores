@@ -1,6 +1,6 @@
 Nos diagramas clássicos de arquitetura de compiladores (como o do _Livro do Dragão_), o Gerenciador da tabela de Símbolos e as Rotinas de Tratamento de Erros não aparecem como etapas sequenciais lineares, mas sim como **barramentos verticais transversais**:
 
-![[Pasted image 20260914224116.png]]
+![Imagem](<../images/Pasted image 20260914224116.png>)
 
 Ambos operam em conjunto com praticamente **todas** as etapas do pipeline.
 ### 1. O Gerenciador da Tabela de Símbolos (_Symbol Table Handler_)

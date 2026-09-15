@@ -6,13 +6,6 @@
 ![Status](https://img.shields.io/badge/Status-1ª%20Unidade%20Concluída-success?style=for-the-badge)
 ![Licença](https://img.shields.io/badge/Licen%C3%A7a-Acad%C3%AAmica-lightgrey?style=for-the-badge)
 
-<p align="center">
-  <b>Repositório dedicado ao estudo aprofundado da teoria, arquitetura e engenharia de compiladores, tradutores e linguagens de programação.</b>
-</p>
-
-[📖 Acessar Apresentação em Slides (APRESENTACAO.md)](./APRESENTACAO.md) • [🗂️ Estrutura de Pastas](#-estrutura-do-reposit%C3%B3rio) • [⚙️ Pipeline de Tradução](#-a-cadeia-de-ferramentas-toolchain) • [🧩 O Exemplo da Lousa](#-estudo-de-caso-pr%C3%A1tico-o-exemplo-de-sala)
-
-</div>
 
 ---
 
@@ -200,96 +193,6 @@ flowchart LR
 Dois componentes essenciais atravessam verticalmente todas as fases:
 1. **[Tabela de Símbolos](./1ª%20Unidade/Funcionamento%20de%20um%20compilador/Barramentos%20Transversais.md):** Estrutura hierárquica (árvores ou pilhas de *hash tables*) para gerenciar escopos, tipos, parâmetros e deslocamentos em memória.
 2. **[Tratamento e Recuperação de Erros](./1ª%20Unidade/Funcionamento%20de%20um%20compilador/Barramentos%20Transversais.md):** Estratégias como *Modo Pânico* (avanço até tokens de sincronização como `;` ou `}`) e inserção de tipos coringa (`type_error`) para evitar erros em cascata.
-
----
-
-## 🧪 Estudo de Caso Prático: O Exemplo de Sala
-
-Acompanhe a dissecação da instrução:
-$$\text{POS} := 5 + 7 \times \text{TEMPO}$$
-
-Onde $\text{TEMPO}$ e $\text{POS}$ são do tipo `float`, e as constantes literais `5` e `7` são do tipo `int`.
-
-```carousel
-<!-- slide -->
-### 1. Análise Léxica (Scanner)
-O analisador quebra a cadeia em átomos léxicos (*tokens*):
-- `Id1` $\to$ Identificador (`POS`)
-- `SA`  $\to$ Símbolo de Atribuição (`:=`)
-- `CO1` $\to$ Constante Inteira (`5`)
-- `SS`  $\to$ Símbolo de Soma (`+`)
-- `CO2` $\to$ Constante Inteira (`7`)
-- `SM`  $\to$ Símbolo de Multiplicação (`*`)
-- `Id2` $\to$ Identificador (`TEMPO`)
-
-Tokens gerados:
-$$\langle \text{Id1} \rangle \; \langle \text{SA} \rangle \; \langle \text{CO1} \rangle \; \langle \text{SS} \rangle \; \langle \text{CO2} \rangle \; \langle \text{SM} \rangle \; \langle \text{Id2} \rangle$$
-
-<!-- slide -->
-### 2. Análise Sintática (Parser)
-O analisador monta a **Árvore de Sintaxe Abstrata (AST)** respeitando a precedência de operadores:
-
-```
-            Atribuição (:=)
-            /             \
-       Id1 (POS)       Soma (+)
-                       /       \
-                   CO1 (5)   Mult (*)
-                             /      \
-                         CO2 (7)   Id2 (TEMPO)
-```
-
-<!-- slide -->
-### 3. Análise Semântica (Type Checking)
-O analisador consulta a Tabela de Símbolos, constata que $\text{TEMPO}$ é `float` e que a CPU não multiplica diretamente inteiros por números de ponto flutuante. Inserem-se nós de coerção explícita (`InttoFloat`):
-
-```
-                  (:=) [float]
-                 /            \
-        Id1 [float]          (+) [float]
-                            /           \
-                InttoFloat [float]       (*) [float]
-                        |               /           \
-                    CO1 [int]   InttoFloat [float]   ID2 [float]
-                                        |
-                                    CO2 [int]
-```
-
-<!-- slide -->
-### 4. Geração de Código Intermediário (TAC)
-O compilador lineariza a árvore decorada em instruções de Três Endereços:
-
-```
-Aux1 := InttoFloat(7)     // Converte 7 -> 7.0
-Aux2 := InttoFloat(5)     // Converte 5 -> 5.0
-Aux3 := Aux1 * TEMPO      // Multiplicação de floats
-Aux4 := Aux2 + Aux3       // Soma de floats
-POS  := Aux4              // Atribuição final
-```
-
-<!-- slide -->
-### 5. Otimização de Código
-Aplicam-se técnicas de **Constant Folding** (dobradura de constantes em tempo de compilação) e **Copy Propagation**:
-- $7 \to 7.0$ e $5 \to 5.0$ em tempo de compilação (elimina `Aux1` e `Aux2`).
-- Eliminação do registrador temporário redundante `Aux4`:
-
-```
-Aux3 := 7.0 * TEMPO
-POS  := 5.0 + Aux3
-```
-
-<!-- slide -->
-### 6. Geração de Código Final & Peephole Optimization
-Tradução para Assembly de dois endereços com suporte a ponto flutuante:
-
-```assembly
-; Versão com Peephole Optimization:
-MOVF TEMPO, R1       ; Carrega TEMPO no registrador R1
-MULF 7.0, R1         ; Multiplica R1 por 7.0
-ADDF 5.0, R1         ; Soma 5.0 ao acumulador R1
-MOVF R1, POS         ; Escreve o resultado diretamente na variável POS
-```
-```
 
 ---
 
